@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "cb8e0ead-db7e-486d-9521-a981f765e077",
+		"name": "email-scedule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{Host}}/api/user/email-schedule/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\":\"mustafagondalwala32@gmail.com\",\r\n    \"to\":\"mustafagondalwala322@gmail.com\",\r\n    \"subject\":\"Testing\",\r\n    \"message\":\"Testing\",\r\n    \"sceduledAt\":{{$timestamp}}\r\n}1",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/api/user/email-schedule/create",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"email-schedule",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{Host}}/api/user/email-schedule/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\":\"mustafagondalwala32@gmail.com\",\r\n    \"to\":\"mustafagondalwala322@gmail.com\",\r\n    \"subject\":\"Testing\",\r\n    \"message\":\"Testing\",\r\n    \"sceduledAt\":{{$timestamp}},\r\n    \"scedule_id\":\"6064c431b640692ecc01624b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/api/user/email-schedule/update",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"email-schedule",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{Host}}/api/user/email-schedule/6064c431b640692ecc01624b",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\":\"mustafagondalwala32@gmail.com\",\r\n    \"to\":\"mustafagondalwala322@gmail.com\",\r\n    \"subject\":\"Testing\",\r\n    \"message\":\"Testing\",\r\n    \"sceduledAt\":{{$timestamp}},\r\n    \"scedule_id\":\"6064c431b640692ecc01624b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/api/user/email-schedule/6064c431b640692ecc01624b",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"email-schedule",
+						"6064c431b640692ecc01624b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{Host}}/api/user/email-schedule/fetchAll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from\":\"mustafagondalwala32@gmail.com\",\r\n    \"to\":\"mustafagondalwala322@gmail.com\",\r\n    \"skip\":0,\r\n    \"limit\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/api/user/email-schedule/fetchAll",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"email-schedule",
+						"fetchAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{Host}}/api/user/email-schedule/logs/fetchAll",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/api/user/email-schedule/logs/fetchAll",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"email-schedule",
+						"logs",
+						"fetchAll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,23 @@
+# We have 2 stage Test and Deploy
+stages:
+  - test
+
+# Config cache
+cache:
+  paths:
+    - node_modules/
+
+# Test job
+test:
+  # Docker image
+  image: node:10.0.0
+  only:
+    - master
+  tags:
+    - master
+  # Attach Test job to Test stage
+  stage: test
+  # Config to use GitLab Shared Runner with Executor Docker
+  script:
+    - npm run kill
+    - npm run production
